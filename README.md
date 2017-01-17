@@ -167,6 +167,19 @@ https://keith.stdlib.com/sequence?q=A&repeat=10000&count=0&stats
 }
 ```
 
+## Deploy to StdLib, Build Your Own MapReduce Service
+
+If you'd like to deploy a copy of this service on StdLib, use the [StdLib CLI tools](https://github.com/poly/stdlib);
+
+```
+$ npm install lib -g
+$ lib init
+$ lib up
+```
+
+Make sure to change `{"stdlib": {"name": "keith/sequence"}}` in `package.json`
+to match your username and desired service name.
+
 ## That's it!
 
 Thanks for checking this service out. I look forward to seeing other people
