@@ -1,0 +1,14 @@
+{
+  "name": "search",
+  "description": "Search a nucleotide sequence for a query sequence, return matches",
+  "kwargs": {
+    "q": "Query sequence for alignment",
+    "seq": "Genome sequence to search through",
+    "count": "Number of results to return (default 1)",
+    "repeat": "Repeats of query sequence",
+    "stats": "Show search statistics"
+  },
+  "http": {
+    "headers": {}
+  }
+}

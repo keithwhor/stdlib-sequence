@@ -1,0 +1,19 @@
+{
+  "name": "sequence",
+  "version": "0.0.2",
+  "description": "Nucleotide sequence comparison service",
+  "author": "keith <keith@polybit.com>",
+  "main": "f/search/index.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "f": "^1.3.2",
+    "ntseq": "^1.1.0"
+  },
+  "private": true,
+  "stdlib": {
+    "name": "keith/sequence",
+    "defaultFunction": "search",
+    "timeout": 30000,
+    "publish": true
+  }
+}

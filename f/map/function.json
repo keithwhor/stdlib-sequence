@@ -1,0 +1,13 @@
+{
+  "name": "map",
+  "description": "Map (sequence alignment) function",
+  "args": [],
+  "kwargs": {
+    "q": "Query sequence for alignment",
+    "seq": "Genome sequence to search through",
+    "offset": "offset of starting position in the genome sequence (default 0)"
+  },
+  "http": {
+    "headers": {}
+  }
+}
