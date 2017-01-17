@@ -1,6 +1,6 @@
 {
   "name": "sequence",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nucleotide sequence comparison service",
   "author": "keith <keith@polybit.com>",
   "main": "f/search/index.js",
