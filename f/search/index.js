@@ -15,7 +15,7 @@ module.exports = (params, callback) => {
   seq = seq || K12;
 
   let count = 'count' in params.kwargs ? parseInt(params.kwargs.count) || 0 : 1;
-  count = Math.max(0, count);
+  count = Math.min(100, Math.max(0, count));
 
   let repeat = parseInt(params.kwargs.repeat) || 0;
   repeat = Math.max(1, repeat);
@@ -26,8 +26,14 @@ module.exports = (params, callback) => {
   // Repeat query if provided
   q = q.repeat(repeat);
 
+  if (q.length > 5000000 || seq.length > 5000000) {
+    return callback(new Error('Query and sequence length must be <= 5000000 (including repeats)'));
+  }
+
+  // Set max workers to 200
   let size = Math.max(10, 1000000000 / q.length);
-  let workers = Math.ceil(seq.length / size);
+  let workers = Math.max(200, Math.ceil(seq.length / size));
+  size = Math.ceil(seq.length / workers);
 
   // if workers === 1, no need to parallelize
   workers = workers <= 1 ? 0 : workers;
