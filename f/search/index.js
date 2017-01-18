@@ -32,7 +32,7 @@ module.exports = (params, callback) => {
 
   // Set max workers to 200
   let size = Math.max(10, 1000000000 / q.length);
-  let workers = Math.max(200, Math.ceil(seq.length / size));
+  let workers = Math.min(200, Math.ceil(seq.length / size));
   size = Math.ceil(seq.length / workers);
 
   // if workers === 1, no need to parallelize
